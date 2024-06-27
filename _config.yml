@@ -9,27 +9,28 @@
 
 # Site settings
 title: "mammoth-3D"
-email: "themeix@gmail.com"
-description: "Doxy is a responsive Jekyll template for your documentation or knowledgebase website"
+email: "info@mammoth-3D.ch"
+description: "mammoth-3D Documentation"
 keywords: "jekyll, minimal jekyll, jekyll theme, responsive jekyll, seo friendly blog, super fast blog, responsive"
-baseurl: "docs" # the subpath of your site, e.g. /blog
-url: "https://jekyll-doxy.netlify.app/"
-cover_image: "https://themeix.com/wp-content/uploads/dooxy-responsive-html-template-preview.png" # Image will Display in Social Media When share the website
-facebook: "https://www.facebook.com"
-twitter: "https://www.twitter.com"
-instagram: "https://www.instagram.com"
-github: "https://www.github.com"
-linkedin: "https://www.linkedin.com"
-behance: "https://www.behance.com"
-reddit: "https://www.reddit.com"
-vimeo: "https://www.vimeo.com"
-dribble: "https://www.dribble.com"
-youtube: "https://www.youtube.com"
+baseurl: "/docs" # the subpath of your site, e.g. /blog
+url: "https://mammoth-3d.github.io/docs/"
+cover_image: "" # Image will Display in Social Media When share the website
+#facebook: "https://www.facebook.com"
+#twitter: "https://www.twitter.com"
+#instagram: "https://www.instagram.com"
+github: "https://github.com/mammoth-3D"
+#linkedin: "https://www.linkedin.com"
+#behance: "https://www.behance.com"
+#reddit: "https://www.reddit.com"
+#vimeo: "https://www.vimeo.com"
+#dribble: "https://www.dribble.com"
+youtube: "https://www.youtube.com/@mammoth-3d"
+discord: "https://discord.gg/kYQZx8FW"
 
 ## Theme Options
 animated_header: ""  #true 
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: 
+github_username: 
 
 
 # Build settings

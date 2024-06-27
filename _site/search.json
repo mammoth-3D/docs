@@ -1,0 +1,81 @@
+[
+  
+    {
+      "title"    : "Client editable Jekyll sites",
+      "tags"     : "Profile",
+      "url"      : "/docs/docs/client-editable-jekyll-sites/"
+    } ,
+  
+    {
+      "title"    : "File structure",
+      "tags"     : "Profile",
+      "url"      : "/docs/docs/file-structure/"
+    } ,
+  
+    {
+      "title"    : "Front matter",
+      "tags"     : "Invoice",
+      "url"      : "/docs/docs/front-matter/"
+    } ,
+  
+    {
+      "title"    : "Introduction of Payment collection",
+      "tags"     : "Payment",
+      "url"      : "/docs/docs/introduction-to-collections/"
+    } ,
+  
+    {
+      "title"    : "Introduction of installation process",
+      "tags"     : "Installation",
+      "url"      : "/docs/docs/layouts/"
+    } ,
+  
+    {
+      "title"    : "Why should use doxy jekyll theme?",
+      "tags"     : "Billing",
+      "url"      : "/docs/docs/why-use-a-static-site-generator/"
+    } ,
+  
+    {
+      "title"    : "How to add a credit card?",
+      "tags"     : "Account Settings, Payment, Billing",
+      "url"      : "/docs/docs/add-a-credit-card/"
+    } ,
+  
+    {
+      "title"    : "Auzure payment procesisng",
+      "tags"     : "Payment, Invoice, Billing",
+      "url"      : "/docs/docs/azure/"
+    } ,
+  
+    {
+      "title"    : "Why account got banned?",
+      "tags"     : "Account Settings, Installation",
+      "url"      : "/docs/docs/cause/"
+    } ,
+  
+    {
+      "title"    : "Doc with multiple tags/ category",
+      "tags"     : "Profile, Account Settings, Invoice",
+      "url"      : "/docs/docs/change-email/"
+    } ,
+  
+    {
+      "title"    : "Chnage Password",
+      "tags"     : "Account Settings",
+      "url"      : "/docs/docs/change-password/"
+    } ,
+  
+    {
+      "title"    : "Not getting cloudflare access",
+      "tags"     : "Installation",
+      "url"      : "/docs/docs/cloud-flare/"
+    } ,
+  
+    {
+      "title"    : "Not working my credit card",
+      "tags"     : "Invoice, Profile",
+      "url"      : "/docs/docs/creating-a-plugin/"
+    } 
+  
+]

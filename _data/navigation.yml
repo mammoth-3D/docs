@@ -2,9 +2,7 @@
 
 - text: Home
   url: /
-- text: Support
-  url: /pages/support
-- text: Blog
+- text: Config
   url: /blog
   submenu:
   - text: Blog Post - Left Sidebar
@@ -22,18 +20,11 @@
     url: /docs/cloud-flare/
   - text: Docs Fullwidth
     url: /docs/client-editable-jekyll-sites/
-- text: Pages
-  url: /
-  submenu:
-  - text: Changelog
-    url: /pages/changelog
-  - text: Testimonials
-    url: /pages/testimonials    
-  - text: Privacy Policy
-    url: /pages/privacy-policy    
-  - text: FAQ
-    url: /pages/faq 
-  - text: Submit Ticket
-    url: /pages/submit-ticket
 - text: Contact
   url: /pages/contact
+- text: Discord
+  url: https://discord.gg/UWZZfKS9Dq
+- text: YouTube
+  url: https://youtube.com/@mammoth-3d
+- text: GitHub
+  url: https://github.com/mammoth-3D/
