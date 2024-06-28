@@ -1,18 +1,18 @@
-- title: Knowledge Base
+- title: Configuration
   icon: /assets/images/service-icon2.png
-  description: psum is simply dummy text of the pritypesetting industry Lorem Ipsum has been the industry’s standard
+  description: Knowledge Base how to configure Raspberry pi, Klipper with Mainsail and much more.
   button_label: Learn More
-  url: /pages/explore-topics/
+  url: /blog/
   
 - title: Question Answer
   icon: /assets/images/service-icon.png
-  description:  It has survived not only five centuries, but also the leap into electronic typesetting, remaining.
-  button_label: Read FAQ
-  url: /pages/faq/
+  description:  Get in touch with the community on the mammoth-3D Discord Server to get answers to your questions.
+  button_label: Discord Server
+  url: https://discord.gg/UWZZfKS9Dq
   
 - title: Documentation
   icon: /assets/images/service-icon3.png
-  description:  It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.
+  description:  Explore documentation topics how to assemble or build your mammoth-3D upgrades and mods.
   button_label: Read Docs
-  url: /docs/left-sidebar-example
+  url: /explore-topics/
   
