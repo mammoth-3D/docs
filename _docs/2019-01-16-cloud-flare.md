@@ -10,7 +10,7 @@ By choosing to pay a small fee ($5 - $10) for Mammoth-3D parts, end users contri
 
 ## Mammoth-3D Voron2.4 Z Idler Installation Guide
 
-![Example image](/assets/images/test?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=1080&fit=crop&s=80308172730757a7db0434987fa985f3)
+![Example image](https://github.com/mammoth-3D/docs/blob/docs/assets/images/test.jpeg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=1080&fit=crop&s=80308172730757a7db0434987fa985f3)
 
 ![Example image](https://images.unsplash.com/photo-1481487196290-c152efe083f5?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=1080&fit=crop&s=80308172730757a7db0434987fa985f3)
 
