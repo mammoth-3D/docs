@@ -67,15 +67,15 @@
     } ,
   
     {
-      "title"    : "Not getting cloudflare access",
-      "tags"     : "Installation",
-      "url"      : "/docs/docs/cloud-flare/"
-    } ,
-  
-    {
       "title"    : "Not working my credit card",
       "tags"     : "Invoice, Profile",
       "url"      : "/docs/docs/creating-a-plugin/"
+    } ,
+  
+    {
+      "title"    : "Mammoth-3D Voron2.4 Z Idler Installation Guide",
+      "tags"     : "Installation",
+      "url"      : "/docs/docs/cloud-flare/"
     } 
   
 ]

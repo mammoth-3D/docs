@@ -1,14 +1,18 @@
 ---
 layout: doc
-title: Not getting cloudflare access
-date: 2019-09-08 8:14:30 +0600
+title: Mammoth-3D Voron2.4 Z Idler Installation Guide
+date: 2024-06-28
 post_image: assets/images/service-icon3.png
 tags: [Installation]
 toc: true
 ---
-Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and our Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.
+By choosing to pay a small fee ($5 - $10) for Mammoth-3D parts, end users contribute to the continuous development and innovation of Mammoth-3D’s 3D printing technology.
 
-If you already have a full Ruby development environment with all headers and RubyGems installed, you can create a new Jekyll site by doing the following:
+## Mammoth-3D Voron2.4 Z Idler Installation Guide
+
+![Example image](/assets/images/test?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=1080&fit=crop&s=80308172730757a7db0434987fa985f3)
+
+![Example image](https://images.unsplash.com/photo-1481487196290-c152efe083f5?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=1080&fit=crop&s=80308172730757a7db0434987fa985f3)
 
 ## How to install
 
