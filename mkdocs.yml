@@ -1,0 +1,46 @@
+site_name: mammoth-3D
+theme:
+  name: material
+  logo: assets/logo.png
+  features:
+    - navigation.sections
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.path
+    - navigation.indexes
+    - toc.follow
+    - toc.integrate
+    - navigation.top
+    - content.code.copy
+    - navigation.footer
+    - tabs
+    - instant
+    - search.suggest
+    - search.highlight
+  language: en
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch 
+        name: Switch to dark mode
+      primary: black
+      accent: red
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+      primary: red
+      accent: black
+extra:
+  social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/3JxrSnGgsF
+    - icon: fontawesome/brands/github
+      link: https://github.com/mammoth-3D
+  generator: false
+copyright: Copyright &copy; 2023 - 2024 mammoth-3D
+    

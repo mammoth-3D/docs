@@ -1,2 +1,2 @@
 # docs
- mammoth-3D Documentation
+ mammoth-3D documentation
