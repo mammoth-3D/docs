@@ -6,9 +6,9 @@ By choosing to pay a small fee ($5 - $10) for Mammoth-3D parts, end users contri
 - **Improve Quality and Performance**: Continuous improvement efforts ensure that Mammoth-3D parts meet the highest standards of quality and performance.
 - **Expand Material Options**: Funding supports the exploration and introduction of new materials, providing users with more choices for their projects.
 
-![Mammoth-3D on www.printables.com](/assets/support-helps/Mammoth-3D_piggy_bank.png)
+![Mammoth-3D on www.printables.com](/docs/assets/support-helps/Mammoth-3D_piggy_bank.png)
 
-[![Mammoth-3D on www.printables.com](/assets/support-helps/Mammoth-3DatPrintables.png "mammoth-3D Piggy Bank")](https://www.printables.com/@Mammoth3D_2076590/models)
+[![Mammoth-3D on www.printables.com](/docs/assets/support-helps/Mammoth-3DatPrintables.png "mammoth-3D Piggy Bank")](https://www.printables.com/@Mammoth3D_2076590/models)
 
 ## Open Source
 Additionally, Mammoth-3D ensures that its contributions to the 3D printing community extend beyond immediate financial support. All published files and projects will move to open source after a period of six months. This means that if an end user does not wish to pay for the project files now, they will have access to these resources for free after six months. This approach balances immediate funding needs with a long-term commitment to open access and community support.
