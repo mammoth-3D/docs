@@ -1,7 +1,64 @@
-site_name: mammoth-3D
+site_name: !ENV [SITE_NAME, 'mammoth-3D']
+site_url: !ENV [SITE_URL, 'https://mammoth-3d.github.io/docs']
+site_description: !ENV [SITE_DESCRIPTION, 'Mammoth-3D Documentation']
+repo_url: hhttps://github.com/mammoth-3D/docs
+
+nav:
+  - Home: index.md
+  - "How Your Support Helps":
+    - Supporting Innovation: how_your_support_helps/supporting_innovation.md
+
+ # - "mammoth 3D Printer":
+ #   - Sourcing Guide: milo/bom/sourcing_guide.md
+ #   - Printing Guide: milo/printing/print_guide.md
+ #   - Frequently Asked Questions: milo/faq.md
+ #   - Assembly Manual:
+ #       - Acknowledgements: milo/manual/chapters/10_acknowledgements.md
+ #       - Introduction: milo/manual/chapters/20_introduction.md
+    #    - Hardware Reference: milo/manual/chapters/30_hardware_reference.md
+    #    - Y-Axis Assembly: milo/manual/chapters/40_y_axis_assembly.md
+    #    - X-Axis Assembly: milo/manual/chapters/50_x_axis_assembly.md
+    #    - Z-Axis Assembly: milo/manual/chapters/60_z_axis_assembly.md
+    #    - FMJ Assembly: milo/manual/chapters/70_fmj_assembly.md
+    #    - Table Assembly: milo/manual/chapters/80_table_assembly.md
+    #    - Install RRF: milo/manual/chapters/90_install_rrf.md
+    #    - Assemble Electronics: milo/manual/chapters/100_assemble_electronics.md
+    #    - Pre-Flight Checks: milo/manual/chapters/110_pre_flight_checks.md
+
+  - "Voron 3D Printers":
+    - Tool-free Z-Axis Tensioner for Voron 2.4:
+        - Z-Axis Tensioner: voron_3d_printers/z_axis_tensioner_voron24/index.md
+        - Sourcing Guide: voron_3d_printers/z_axis_tensioner_voron24/sourcing_guide.md
+        - Printing Guide: voron_3d_printers/z_axis_tensioner_voron24/printing_guide.md
+
+  #- "VZBOT 3D Printers":
+  #  - Sourcing Guide: casa/bom/sourcing_guide.md
+  #  - Printing Guide: casa/bom/printing_guide.md
+    #- Frequently Asked Questions: casa/faq.md
+    # - Assembly Manual:
+    #   - Introduction: casa/manual/chapters/10_introduction.md
+
+  #- "RatRig vCore 3D Printers":
+   # - Sourcing Guide: casa/bom/sourcing_guide.md
+   # - Printing Guide: casa/bom/printing_guide.md
+    #- Frequently Asked Questions: casa/faq.md
+    # - Assembly Manual:
+    #   - Introduction: casa/manual/chapters/10_introduction.md
+ 
+   
+extra_css:
+  - stylesheets/layout.css
+
 theme:
   name: material
+  font:
+    text: Roboto
   logo: assets/logo.png
+  icon:
+    logo: fontawesome/solid/industry
+    annotation: material/wrench-outline
+  favicon: assets/logo.png
+  
   features:
     - navigation.sections
     - navigation.instant
