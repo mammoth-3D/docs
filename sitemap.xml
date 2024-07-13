@@ -1,3 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://mammoth-3d.github.io/docs/</loc>
+         <lastmod>2024-07-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mammoth-3d.github.io/docs/how_your_support_helps/supporting_innovation/</loc>
+         <lastmod>2024-07-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mammoth-3d.github.io/docs/voron_3d_printers/z_axis_tensioner_voron24/</loc>
+         <lastmod>2024-07-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
 </urlset>
