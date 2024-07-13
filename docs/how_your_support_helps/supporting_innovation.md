@@ -6,9 +6,9 @@ By choosing to pay a small fee ($5 - $10) for Mammoth-3D parts, end users contri
 - **Improve Quality and Performance**: Continuous improvement efforts ensure that Mammoth-3D parts meet the highest standards of quality and performance.
 - **Expand Material Options**: Funding supports the exploration and introduction of new materials, providing users with more choices for their projects.
 
-![Mammoth-3D on www.printables.com](/assets/support-helps/Mammoth-3D_piggy_bank.png)
+![Mammoth-3D on www.printables.com](../assets/support-helps/Mammoth-3D_piggy_bank.png)
 
-[![Mammoth-3D on www.printables.com](/assets/support-helps/Mammoth-3DatPrintables.png "mammoth-3D Piggy Bank")](https://www.printables.com/@Mammoth3D_2076590/models)
+[![Mammoth-3D on www.printables.com](../assets/support-helps/Mammoth-3DatPrintables.png "mammoth-3D Piggy Bank")](https://www.printables.com/@Mammoth3D_2076590/models)
 
 **Open Source:**
 
