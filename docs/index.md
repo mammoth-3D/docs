@@ -2,6 +2,8 @@
 
 mammoth-3D mods for 3D printers represent a significant leap forward in enhancing the capabilities of your 3D printing setup. Here's why they stand out in terms of design, functionality, performance, and user-friendliness, and how easily they integrate with popular printers like Voron, VZBOT, RatRig vCore, and many more:
 
+![mammoth-3D Toolhead](./assets/img/mammoth_toolhead.png)
+
 **Innovative Design**
 mammoth-3D mods are meticulously crafted with a focus on both form and function:
 
