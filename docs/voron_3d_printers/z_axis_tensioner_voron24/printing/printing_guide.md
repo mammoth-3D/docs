@@ -29,12 +29,12 @@ No need for that :octicons-heart-fill-24:{ .heart }
 ## **Parts to print**
 | **Qty** | **Name** | **Layer hight** | **Wall loops/Min. Wall Thickness** | **Top/Bottom shell layers** |**Infill** | **Material** | **Accent Color** |
 |---------|----------|-----------------|------------------------------------|-----------------------------|----------------------|---|-|
-| 2x | [X-Axis Table support (Ends)    ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/X%20Axis%20STLs/X%20Axis%20Table%20Support%20Ends%20x4%20.stl)   | 0.2mm | **4**/1.6mm | 5 | 42% |ABS/ASA/PA-CF | :material-close: No |
-| 2x | [X-Axis Table support (Centres) ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/X%20Axis%20STLs/X%20Axis%20Table%20Support%20Centre%20x2%20.stl) | 0.2mm | **4**/1.6mm | 5 | 42% | ABS/ASA/PA-CF | :material-close: No |
-| 2x | [X-Axis Motor Mount             ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/X%20Axis%20STLs/X%20Axis%20Motor%20Mount%20x1.stl)               | 0.2mm | **4**/1.6mm | 5 | 42% | ABS/ASA/PA-CF | :material-close: No |
-| 2x | [X-Axis Bearing Block           ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/X%20Axis%20STLs/X%20Axis%20Bearing%20Block%20x1.stl)             | 0.2mm | **4**/1.6mm | 5 | 42% | ABS/ASA/PA-CF | :material-close: No |
-| 4x | [X-Axis Anti Backlash Nut       ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/X%20Axis%20STLs/X%20Axis%20Anti%20Backlash%20Nut%20x1.stl)       | 0.2mm | **6**/2mm   | 5 | 60% | ABS/ASA | :material-check: Yes |
-| 4x | [X-Axis Anti Backlash Nut       ](https://github.com/MillenniumMachines/Milo-v1.5/tree/main/STL%20Files/Minimill%20Main/X%20Axis%20STLs/X%20Axis%20Anti%20Backlash%20Nut%20x1.stl)       | 0.2mm | **4**/1.6mm | 5 | 42% | ABS/ASA | :material-check: Yes |
+| 2x | [Belt Tensioner Mainbody Right  ](https://www.printables.com/model/918365-tool-free-z-axis-belt-tensioner-for-voron-24) | 0.2mm | **4**/1.6mm | 5 | 42% |ABS/ASA/PA-CF | :material-close: No |
+| 2x | [Belt Tensioner Coverbody Right ](https://www.printables.com/model/918365-tool-free-z-axis-belt-tensioner-for-voron-24) | 0.2mm | **4**/1.6mm | 5 | 42% | ABS/ASA/PA-CF | :material-close: No |
+| 2x | [Belt Tensioner Mainbody Left   ](https://www.printables.com/model/918365-tool-free-z-axis-belt-tensioner-for-voron-24)  | 0.2mm | **4**/1.6mm | 5 | 42% | ABS/ASA/PA-CF | :material-close: No |
+| 2x | [Belt Tensioner Coverbody Left  ](https://www.printables.com/model/918365-tool-free-z-axis-belt-tensioner-for-voron-24)  | 0.2mm | **4**/1.6mm | 5 | 42% | ABS/ASA/PA-CF | :material-close: No |
+| 4x | [U Body                         ](https://www.printables.com/model/918365-tool-free-z-axis-belt-tensioner-for-voron-24)  | 0.2mm | **6**/2mm   | 5 | 60% | ABS/ASA | :material-check: Yes |
+| 4x | [Tension Knob                   ](https://www.printables.com/model/918365-tool-free-z-axis-belt-tensioner-for-voron-24)  | 0.2mm | **4**/1.6mm | 5 | 42% | ABS/ASA | :material-check: Yes |
 
 !!! tip
     The "Tensioner" can be printed only once and you don't need to keep it on the printer. You will only need them to tension your belts. But can be removed afterwards. 
