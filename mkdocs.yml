@@ -1,7 +1,7 @@
 site_name: !ENV [SITE_NAME, 'mammoth-3D']
-site_url: !ENV [SITE_URL, 'https://mammoth-3d.github.io/docs']
-site_description: !ENV [SITE_DESCRIPTION, 'Mammoth-3D Documentation']
-repo_url: hhttps://github.com/mammoth-3D/docs
+site_url: !ENV [SITE_URL, 'https://docs.mammoth-3d.ch']
+site_description: !ENV [SITE_DESCRIPTION, 'mammoth-3D Documentation']
+repo_url: https://github.com/mammoth-3D/docs
 
 nav:
   - Home: index.md
