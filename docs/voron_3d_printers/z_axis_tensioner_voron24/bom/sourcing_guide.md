@@ -26,15 +26,7 @@
 
 | **Quantity** | **Description**                                                                | **Link**                                     | 
 |:-------------|--------------------------------------------------------------------------------|---------------------------------------------:|
-| 1x           | mammoth-3d Tool-free Z-Axis Belt Tensioner hardware Kit (all 4)                | [Meltbro](https://meltbro.de) |
-| 1x           | mammoth-3d Tool-free Z-Axis Belt Tensioner hardware Kit (single belt tensiner) | [Meltbro](https://meltbro.de) |
-
-### **Printed Parts and BOM Kit**
-
-| **Quantity** | **Description**                                                                                          | **Link**                                     | 
-|:-------------|----------------------------------------------------------------------------------------------------------|---------------------------------------------:|
-| 1x           | 3D Printed parts **Plus** mammoth-3d Tool-free Z-Axis Belt Tensioner hardware Kit (all 4)                | [Meltbro](https://meltbro.de) |
-| 1x           | 3D Printed parts **Plus** mammoth-3d Tool-free Z-Axis Belt Tensioner hardware Kit (single belt tensiner) | [Meltbro](https://meltbro.de) |
+| 1x           | mammoth-3d Tool-free Z-Axis Belt Tensioner hardware Kit (all 4)                | [**Coming soon** / Mellow 3D ]() |
 
 ### **Z-Axis 9mm Belt**
 

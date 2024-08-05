@@ -3,6 +3,7 @@ site_url: !ENV [SITE_URL, 'https://docs.mammoth-3d.ch']
 site_description: !ENV [SITE_DESCRIPTION, 'mammoth-3D Documentation']
 repo_url: https://github.com/mammoth-3D/docs
 
+
 nav:
   - Home: index.md
   - "How Your Support Helps":
@@ -32,6 +33,7 @@ nav:
         - Printing Guide: voron_3d_printers/z_axis_tensioner_voron24/printing/printing_guide.md
         - Preassembly Manual: voron_3d_printers/z_axis_tensioner_voron24/manual/preassembly.md
         - Assembly Manual: voron_3d_printers/z_axis_tensioner_voron24/manual/assembly_manual.md
+        - Open Source: voron_3d_printers/z_axis_tensioner_voron24/open source/open_source.md
 
   #- "VZBOT 3D Printers":
   #  - Sourcing Guide: casa/bom/sourcing_guide.md

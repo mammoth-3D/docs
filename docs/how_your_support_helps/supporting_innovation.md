@@ -1,4 +1,4 @@
-## **Supporting Innovation with Mammoth-3D. Find us on [Printables.com](https://www.printables.com/@Mammoth3D_2076590/models)**
+## **Supporting Innovation with mammoth-3D. Find us on [Printables.com](https://www.printables.com/@Mammoth3D_2076590/models)**
 
 By choosing to pay a small fee ($5 - $10) for Mammoth-3D parts, end users contribute to the continuous development and innovation of Mammoth-3D’s 3D printing technology. This support enables Mammoth-3D to:
 
