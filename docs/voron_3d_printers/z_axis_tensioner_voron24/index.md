@@ -1,6 +1,4 @@
-# **The Tool-free Z-Axis Belt Tensioner for Voron 2.4 3D Printers by Mammoth-3D is unique due to several key features:**
-
-![Tool-free Z-Axis Belt Tensioner for Voron 2.4 3D Printers by mammoth-3D](belt_tensioner_5.png)
+# **The Tool-free Z-Axis Belt Tensioner for Voron 2.4 3D Printers by Mammoth-3D is unique due to several key features:** ![Tool-free Z-Axis Belt Tensioner for Voron 2.4 3D Printers by mammoth-3D](belt_tensioner_5.png)
 
 **1. Tool-Free Adjustment:**
 

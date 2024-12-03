@@ -27,6 +27,20 @@ nav:
     #    - Pre-Flight Checks: milo/manual/chapters/110_pre_flight_checks.md
 
   - "Voron 3D Printers":
+    - AWD Gantry with VZBOT Toolhead Printed Version:
+       - AWD Gantry: voron_3d_printers/awd_gantry_vz_toolhead_printed_version/index.md
+       - Sourcing Guide: voron_3d_printers/awd_gantry_vz_toolhead_printed_version/bom/awdvz_sourcing_guide.md
+       - Printing Guide: voron_3d_printers/awd_gantry_vz_toolhead_printed_version/printing/awdvz_printing_guide.md
+       - Preassembly Manual: voron_3d_printers/awd_gantry_vz_toolhead_printed_version/manual/awdvz_preassembly.md
+       - Assembly Manual: voron_3d_printers/awd_gantry_vz_toolhead_printed_version/manual/awdvz_assembly_manual.md
+
+    - AWD Gantry with VZBOT Toolhead CNC Version:
+       - AWD Gantry: voron_3d_printers/awd_gantry_vz_toolhead_cnc_version/index.md
+       - Sourcing Guide: voron_3d_printers/awd_gantry_vz_toolhead_cnc_version/bom/awdvz_cnc_sourcing_guide.md
+       - Printing Guide: voron_3d_printers/awd_gantry_vz_toolhead_cnc_version/printing/awdvz_cnc_printing_guide.md
+       - Preassembly Manual: voron_3d_printers/awd_gantry_vz_toolhead_cnc_version/manual/awdvz_cnc_preassembly.md
+       - Assembly Manual: voron_3d_printers/awd_gantry_vz_toolhead_cnc_version/manual/awdvz_cnc_assembly_manual.md
+
     - Tool-free Z-Axis Tensioner for Voron 2.4:
         - Z-Axis Tensioner: voron_3d_printers/z_axis_tensioner_voron24/index.md
         - Sourcing Guide: voron_3d_printers/z_axis_tensioner_voron24/bom/sourcing_guide.md
