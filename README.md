@@ -21,5 +21,3 @@ As Mammoth-3D continues to evolve, the documentation is regularly updated to ref
 The documentation often includes links to community forums, support channels, and additional learning resources. This connectivity provides users with opportunities to ask questions, share experiences, and learn from other community members. It's an invaluable aspect of the documentation that extends learning beyond the written material.
 
 In summary, the Mammoth-3D Documentation is an invaluable tool for maximizing the efficiency, effectiveness, and creativity of users on the platform. It provides essential information and support, making it an indispensable resource for anyone looking to master Mammoth-3D.
-
-
