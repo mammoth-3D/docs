@@ -6,8 +6,14 @@ repo_url: https://github.com/mammoth-3D/docs
 
 nav:
   - Home: index.md
-  - "How Your Support Helps":
-    - Supporting Innovation: how_your_support_helps/supporting_innovation.md
+
+  - "mammoth-3D Gantry":
+    - Ground Rules:
+       - Motor Setup: mammoth_gantry/motor_setup/motor_setup.md
+       - Idler Setup: mammoth_gantry/idler_setup/idler_setup.md
+       - Belt Path: mammoth_gantry/belt_path/belt_path.md
+       - Belt Tension: mammoth_gantry/belt_tension/belt_tension.md
+    
 
  # - "mammoth 3D Printer":
  #   - Sourcing Guide: milo/bom/sourcing_guide.md
@@ -62,6 +68,11 @@ nav:
     #- Frequently Asked Questions: casa/faq.md
     # - Assembly Manual:
     #   - Introduction: casa/manual/chapters/10_introduction.md
+
+
+  - "How Your Support Helps":
+    - Supporting Innovation: how_your_support_helps/supporting_innovation.md
+
  
    
 extra_css:
