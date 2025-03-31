@@ -7,7 +7,8 @@ repo_url: https://github.com/mammoth-3D/docs
 nav:
   - Home: index.md
 
-  - "mammoth-3D Gantry":
+  - "mammoth-3D AWD Gantry":
+    - Merging Two Worlds: mammoth_gantry/merging_two_worlds.md
     - Guidelines:
        - Motor Setup: mammoth_gantry/motor_setup/motor_setup.md
        - Water Cooling: mammoth_gantry/water_cooling/water_cooling.md

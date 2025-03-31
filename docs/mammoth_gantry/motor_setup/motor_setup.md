@@ -9,9 +9,8 @@ Regardless of whether you are using it on a Voron 3D Printer, VZBOT, or RatRig v
 - The X1 motor is always in the back right.
 - The Y1 motor is always in the back left.
 
+![mammoth-3D Gantry Motor Setup](../motor_setup.png)
 
 ## **2WD Configuration:**
 - The X1 (X) motor is always in the back right.
 - The Y1 (Y) motor is always in the back left.
-
-![mammoth-3D Gantry Motor Setup](../motor_setup.png)
