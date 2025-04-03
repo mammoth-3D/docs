@@ -169,3 +169,7 @@ markdown_extensions:
   
   - pymdownx.superfences 
 copyright: Copyright &copy; 2023 - 2025 mammoth-3D
+
+extra_javascript:
+  - javascripts/calculator.js
+  - javascripts/belt_calculator.js
