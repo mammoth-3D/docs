@@ -9,8 +9,8 @@
 
 | **Quantity** | **Description**                               | **Link**   | 
 |:-------------|-----------------------------------------------|-----------:|
-| 1x           | mammoth-3D AWD Gantry Hardware Kit            | Mellow 3D - **Coming Soon!**|
-| 1x           | mammoth-3D AWD Pulleys 20T 6mm belt Kit       | Mellow 3D - **Coming Soon!**|
+| 1x           | mammoth-3D AWD Gantry Hardware Kit            | [Mellow 3D](https://www.aliexpress.com/item/1005008885691336.html?pdp_npi=4%40dis%21USD%21US%20%2430.27%21US%20%2412.16%21%21%2130.27%2112.16%21%40211b629217510306462011226e028e%2112000047090265181%21sh%21CH%210%21X&spm=a2g0o.store_pc_allItems_or_groupList.new_all_items_2007473650367.1005008885691336)|
+| 1x           | mammoth-3D AWD Pulleys 20T 6mm belt Kit       | [Mellow 3D](https://www.aliexpress.com/item/1005004374407134.html?pdp_npi=4%40dis%21CHF%21CHF+2.97%21CHF+1.99%21%21%213.58%212.40%21%40211b65de17507641570464888e70ad%2112000028954062682%21sh%21CH%21169545247%21X&spm=a2g0o.store_pc_allItems_or_groupList.new_all_items_2007473650367.1005004374407134&gatewayAdapt=glo2vnm)|
 
 ## **BOM Version 1.7.3**
 
@@ -66,7 +66,7 @@
 !!! warning
     This MOD was made for the Mellow 3D Pulleys 8.5 / 6.5. (Same as in the VZBOT Kit) Please check before using different once.
 
-| **Quantity** | **Description**                                   | **Link**      |
-|:-------------|---------------------------------------------------|--------------:|
-|  10x         | Mellow_GT2_20T_5x12x8.5_5020808027                |               |
-|  6x          | Mellow_GT2_20T_5x12x8.5_5020808028                |               |
+| **Quantity** | **Description**                                    | **Image**                                           | **Link**                                 |
+|:-------------|----------------------------------------------------|-----------------------------------------------------|-----------------------------------------:|
+|  10x         | 20 Teeth (Mellow_GT2_20T_5x12x8.5_5020808027)      | ![Mellow_GT2_20T_5x12x8.5_5020808027](../27_30.png) | [Mellow 3D](https://www.aliexpress.com/item/1005004374407134.html?pdp_npi=4%40dis%21CHF%21CHF+2.97%21CHF+1.99%21%21%213.58%212.40%21%40211b65de17507641570464888e70ad%2112000028954062682%21sh%21CH%21169545247%21X&spm=a2g0o.store_pc_allItems_or_groupList.new_all_items_2007473650367.1005004374407134&gatewayAdapt=glo2vnm)                                          |
+|  6x          | Without Teeth (Mellow_GT2_20T_5x12x8.5_5020808028) | ![Mellow_GT2_20T_5x12x8.5_5020808028](../28_30.png) | [Mellow 3D](https://www.aliexpress.com/item/1005004374407134.html?pdp_npi=4%40dis%21CHF%21CHF+2.97%21CHF+1.99%21%21%213.58%212.40%21%40211b65de17507641570464888e70ad%2112000028954062682%21sh%21CH%21169545247%21X&spm=a2g0o.store_pc_allItems_or_groupList.new_all_items_2007473650367.1005004374407134&gatewayAdapt=glo2vnm)                                         |
