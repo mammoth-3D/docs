@@ -7,6 +7,16 @@ repo_url: https://github.com/mammoth-3D/docs
 nav:
   - Home: index.md
 
+  - "behemoth AWD Gantry":
+     - Evolution: behemoth/evolution.md
+#    - Guidelines:
+#       - Motor Setup: mammoth_gantry/motor_setup/motor_setup.md
+#       - Water Cooling: mammoth_gantry/water_cooling/water_cooling.md
+#       - Idler Setup: mammoth_gantry/idler_setup/idler_setup.md
+#       - Belt Path: mammoth_gantry/belt_path/belt_path.md
+#       - Belt Tension: mammoth_gantry/belt_tension/belt_tension.md
+    
+
   - "mammoth-3D AWD Gantry":
     - Merging Two Worlds: mammoth_gantry/merging_two_worlds.md
     - Guidelines:
@@ -74,6 +84,14 @@ nav:
 
   - "How Your Support Helps":
     - Supporting Innovation: how_your_support_helps/supporting_innovation.md
+
+  - "Milo CNC MODs":
+    - Dust Cover: 
+       - Dust Cover: milo_cnc/dust_cover/index.md
+       - Sourcing Guide: milo_cnc/dust_cover/bom/dust_cover_sourcing_guide.md
+       - Printing Guide: milo_cnc/dust_cover/printing/dust_cover_printing_guide.md
+       - Preassembly Manual: voron_3d_printers/awd_gantry_vz_toolhead_printed_version/manual/awdvz_preassembly.md
+       - Assembly Manual: voron_3d_printers/awd_gantry_vz_toolhead_printed_version/manual/awdvz_assembly_manual.md
 
  
    
@@ -168,8 +186,10 @@ markdown_extensions:
   - pymdownx.tilde
   
   - pymdownx.superfences 
-copyright: Copyright &copy; 2023 - 2025 mammoth-3D
+copyright: Copyright &copy; 2023 - 2026 mammoth-3D
 
 extra_javascript:
-  - javascripts/calculator.js
   - javascripts/belt_calculator.js
+
+extra_css:
+  - assets/belt_calculator.css
