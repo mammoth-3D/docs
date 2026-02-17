@@ -8,14 +8,7 @@ nav:
   - Home: index.md
 
   - "behemoth AWD Gantry":
-     - Evolution: behemoth/evolution.md
-#    - Guidelines:
-#       - Motor Setup: mammoth_gantry/motor_setup/motor_setup.md
-#       - Water Cooling: mammoth_gantry/water_cooling/water_cooling.md
-#       - Idler Setup: mammoth_gantry/idler_setup/idler_setup.md
-#       - Belt Path: mammoth_gantry/belt_path/belt_path.md
-#       - Belt Tension: mammoth_gantry/belt_tension/belt_tension.md
-    
+    - Evolution: behemoth/evolution.md
 
   - "mammoth-3D AWD Gantry":
     - Merging Two Worlds: mammoth_gantry/merging_two_worlds.md
@@ -130,17 +123,18 @@ theme:
     # Palette toggle for light mode
     - scheme: default
       toggle:
-        icon: material/toggle-switch 
-        name: Switch to dark mode
+       icon: material/toggle-switch-off-outline
+       name: Switch to dark mode
       primary: black
       accent: red
-    # Palette toggle for dark mode
+     # Palette toggle for dark mode
     - scheme: slate
       toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to light mode
+       icon: material/toggle-switch
+       name: Switch to light mode
       primary: red
       accent: black
+
 extra:
   social:
     - icon: fontawesome/brands/discord
