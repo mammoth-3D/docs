@@ -10,6 +10,16 @@ nav:
   - "behemoth AWD Gantry":
     - Evolution: behemoth/evolution.md
 
+  
+  - "Elegoo Orange Storm Giga":
+    - behemoth AWD Gantry for Elegoo Giga:
+#       - AWD Gantry: voron_3d_printers/awd_gantry_vz_toolhead_printed_version/index.md
+       - Sourcing Guide: behemoth/elegoo_giga/bom/source_guide.md
+#       - Printing Guide: voron_3d_printers/awd_gantry_vz_toolhead_printed_version/printing/awdvz_printing_guide.md
+#       - Preassembly Manual: voron_3d_printers/awd_gantry_vz_toolhead_printed_version/manual/awdvz_preassembly.md
+#       - Assembly Manual: voron_3d_printers/awd_gantry_vz_toolhead_printed_version/manual/awdvz_assembly_manual.md
+
+
   - "mammoth-3D AWD Gantry":
     - Merging Two Worlds: mammoth_gantry/merging_two_worlds.md
     - Guidelines:
