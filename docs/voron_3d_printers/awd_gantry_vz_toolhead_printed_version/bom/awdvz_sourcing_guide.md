@@ -3,7 +3,25 @@
 ## **Hardware Kits**
 
 !!! tip
-    **Mellow 3D BOM Kits coming soon.**
+    **Your X-axis needs to be modified or you need to buy new 2020 aluminium profile and shorter MGN9 rails**
+
+    ### Voron 2.4 250mm
+    - X: 314mm  
+    - Back: 167mm  
+    - Side: 350mm (unchanged)  
+    - MGN9 X rail should be 20mm shorter → 280mm  
+
+    ### Voron 2.4 300mm
+    - X: 364mm  
+    - Back: 217mm  
+    - Side: 400mm (unchanged)  
+    - MGN9 X rail should be 20mm shorter → 330mm  
+
+    ### Voron 2.4 350mm
+    - X: 414mm  
+    - Back: 267mm  
+    - Side: 450mm (unchanged)  
+    - MGN9 X rail should be 20mm shorter → 380mm
 
 ### **BOM Kit Version 1.7.3**
 
