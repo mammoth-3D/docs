@@ -1,0 +1,4549 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="mammoth-3D Documentation">
+      
+      
+      
+        <link rel="canonical" href="https://docs.mammoth-3d.ch/behemoth/voron/V24/source_guide/">
+      
+      
+        <link rel="prev" href="../../../evolution/">
+      
+      
+        <link rel="next" href="../../../elegoo_giga/bom/source_guide/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../assets/logo_small.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Voron 2.4 Sourcing Guide - mammoth-3D</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22m22.61%2019-9.08-9.09c.93-2.34.47-5.1-1.44-7C9.79.61%206.21.4%203.66%202.26L7.5%206.11%206.08%207.5%202.25%203.69C.39%206.23.6%209.82%202.9%2012.11c1.86%201.86%204.57%202.35%206.89%201.48l9.11%209.11c.39.39%201.02.39%201.41%200l2.3-2.3c.39-.4.39-1.01%200-1.4m-3%201.59-9.46-9.46c-.61.45-1.29.72-2%20.82-1.36.2-2.79-.21-3.83-1.25C3.37%209.76%202.93%208.5%203%207.26l3.09%203.09%204.24-4.24L7.24%203c1.26-.05%202.49.39%203.44%201.33a4.47%204.47%200%200%201%201.24%203.96%204.35%204.35%200%200%201-.88%201.96l9.46%209.45z%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/belt_calculator.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mellow-3d-behemoth-voron-24-bill-of-material" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="mammoth-3D" class="md-header__button md-logo" aria-label="mammoth-3D" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            mammoth-3D
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Voron 2.4 Sourcing Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="black"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mammoth-3D/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="mammoth-3D" class="md-nav__button md-logo" aria-label="mammoth-3D" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    mammoth-3D
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mammoth-3D/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    behemoth AWD Gantry
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    behemoth AWD Gantry
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../evolution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evolution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mellow-3D behemoth AWD Gantry for Voron 3D Printers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mellow-3D behemoth AWD Gantry for Voron 3D Printers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Voron 2.4 Sourcing Guide
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Voron 2.4 Sourcing Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#version-100-25042026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version: 1.00 / 25.04.2026
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behemoth-set1-x1-y1-motor-mount" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        behemoth - Set1: X1 &amp; Y1 Motor Mount
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="behemoth - Set1: X1 &amp; Y1 Motor Mount">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aluminium-parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aluminium Parts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screws" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screws
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flanged-ball-bearings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flanged Ball Bearings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aluminium-bushings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aluminium Bushings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drop-in-t-nut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drop-in T-nut
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behemoth-set2-x-y-motor-mount" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        behemoth - Set2: X &amp; Y Motor Mount
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="behemoth - Set2: X &amp; Y Motor Mount">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aluminium-parts_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aluminium Parts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screws_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screws
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flanged-ball-bearings_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flanged Ball Bearings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aluminium-bushings_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aluminium Bushings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drop-in-t-nut_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drop-in T-nut
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behemoth-set3-x1-y1-idler-pack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        behemoth - Set3: X1 &amp; Y1 Idler Pack
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="behemoth - Set3: X1 &amp; Y1 Idler Pack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aluminium-parts_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aluminium Parts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screws_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screws
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flanged-ball-bearings_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flanged Ball Bearings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behemoth-set4-idler-pack-tension-arms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        behemoth - Set4: Idler Pack Tension Arms
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="behemoth - Set4: Idler Pack Tension Arms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aluminium-parts_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aluminium Parts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screws_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screws
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flanged-ball-bearings_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flanged Ball Bearings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#h6-precision-dowel-pins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        h6 Precision dowel pins
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#precision-shims" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Precision shims
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-hole-hammer-nuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cross Hole Hammer Nuts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behemoth-set5-x-y-idler-pack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        behemoth - Set5: X &amp; Y Idler Pack
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="behemoth - Set5: X &amp; Y Idler Pack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aluminium-parts_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aluminium Parts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flanged-ball-bearings_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flanged Ball Bearings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behemoth-set6-xy-joiners" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        behemoth - Set6: XY Joiners
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="behemoth - Set6: XY Joiners">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aluminium-parts_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aluminium Parts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screws_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screws
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flanged-ball-bearings_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flanged Ball Bearings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behemoth-set7-high-speed-x-axis-for-voron-300" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        behemoth - Set7: High Speed X-axis for Voron 300
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="behemoth - Set7: High Speed X-axis for Voron 300">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aluminium-parts_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aluminium Parts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behemoth-set8-high-speed-x-axis-for-voron-350" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        behemoth - Set8: High Speed X-axis for Voron 350
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="behemoth - Set8: High Speed X-axis for Voron 350">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aluminium-parts_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aluminium Parts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behemoth-set9-high-temperature-x-axis-for-voron-300" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        behemoth - Set9: High-temperature X-axis for Voron 300
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="behemoth - Set9: High-temperature X-axis for Voron 300">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stainless-steel-parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stainless steel Parts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behemoth-set10-high-temperature-x-axis-for-voron-350" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        behemoth - Set10: High-temperature X-axis for Voron 350
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="behemoth - Set10: High-temperature X-axis for Voron 350">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stainless-steel-parts_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stainless steel Parts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behemoth-set11-high-temperature-x-axis-for-voron-400" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        behemoth - Set11: High-temperature X-axis for Voron 400
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="behemoth - Set11: High-temperature X-axis for Voron 400">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stainless-steel-parts_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stainless steel Parts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behemoth-set12-v24-fixed-z-joints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        behemoth - Set12: V24 Fixed Z Joints
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="behemoth - Set12: V24 Fixed Z Joints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aluminium-parts_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aluminium Parts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screws_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screws
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behemoth-set14-live-idler-9mm-with-teeth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        behemoth - Set14: Live Idler 9mm with teeth
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="behemoth - Set14: Live Idler 9mm with teeth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#live-idler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Live Idler
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behemoth-set15-live-idler-9mm-without-teeth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        behemoth - Set15: Live Idler 9mm without teeth
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="behemoth - Set15: Live Idler 9mm without teeth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#live-idler_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Live Idler
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behemoth-set16-live-idler-12mm-with-teeth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        behemoth - Set16: Live Idler 12mm with teeth
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="behemoth - Set16: Live Idler 12mm with teeth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#live-idler_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Live Idler
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behemoth-set17-live-idler-12mm-without-teeth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        behemoth - Set17: Live Idler 12mm without teeth
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="behemoth - Set17: Live Idler 12mm without teeth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#live-idler_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Live Idler
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behemoth-set18-brass-m5x9mm-belt-pulley" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        behemoth - Set18: Brass M5x9mm belt pulley
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="behemoth - Set18: Brass M5x9mm belt pulley">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#brass-pulley" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brass pulley
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behemoth-set19-brass-m5x12mm-belt-pulley" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        behemoth - Set19: Brass M5x12mm belt pulley
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="behemoth - Set19: Brass M5x12mm belt pulley">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#brass-pulley_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brass pulley
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behemoth-set20-brass-m8x9mm-belt-pulley" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        behemoth - Set20: Brass M8x9mm belt pulley
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="behemoth - Set20: Brass M8x9mm belt pulley">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#brass-pulley_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brass pulley
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behemoth-set21-brass-m8x12mm-belt-pulley" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        behemoth - Set21: Brass M8x12mm belt pulley
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="behemoth - Set21: Brass M8x12mm belt pulley">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#brass-pulley_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brass pulley
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behemoth-set22-behemoth-toolhead-for-mgn9h-and-mgn12h" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        behemoth - Set22: behemoth Toolhead for MGN9H and MGN12H
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="behemoth - Set22: behemoth Toolhead for MGN9H and MGN12H">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aluminium-parts_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aluminium Parts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screws_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screws
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locknut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Locknut
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#washer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Washer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#threaded-insert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Threaded Insert
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aluminium-bushings_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aluminium Bushings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behemoth-set23-9-10mm-belt-clamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        behemoth - Set23: 9-10mm Belt Clamp
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="behemoth - Set23: 9-10mm Belt Clamp">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#laser-cut-stainless-steel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Laser Cut Stainless Steel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behemoth-set24-12mm-belt-clamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        behemoth - Set24: 12mm Belt Clamp
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="behemoth - Set24: 12mm Belt Clamp">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#laser-cut-stainless-steel_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Laser Cut Stainless Steel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behemoth-set25-hell-fire-water-cooling-plate-mounting-plate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        behemoth - Set25: Hell Fire Water cooling Plate / Mounting Plate
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="behemoth - Set25: Hell Fire Water cooling Plate / Mounting Plate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aluminium-parts_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aluminium Parts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screws_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screws
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bearings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bearings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#press-fit-adapter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Press fit adapter
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behemoth-set26-universal-hotend-plate-and-duct-mounting-plate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        behemoth - Set26: Universal Hotend Plate and Duct Mounting Plate
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="behemoth - Set26: Universal Hotend Plate and Duct Mounting Plate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aluminium-parts_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aluminium Parts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mammoth-3d-set28-hell-fire-hotend-150-watt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mammoth-3D - Set28: Hell Fire Hotend 150 Watt
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="mammoth-3D - Set28: Hell Fire Hotend 150 Watt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hell-fire-hotend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hell Fire Hotend
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thermistor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thermistor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screws_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screws
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slm-titanium-shield" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SLM Titanium Shield
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heat-brak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heat Brak
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kevlar-sock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kevlar Sock
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v6-nozzle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        V6 Nozzle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elegoo Orange Storm Giga
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Elegoo Orange Storm Giga
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    behemoth AWD Gantry for Elegoo Giga
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    behemoth AWD Gantry for Elegoo Giga
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../elegoo_giga/bom/source_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sourcing Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    mammoth-3D AWD Gantry
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    mammoth-3D AWD Gantry
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../mammoth_gantry/merging_two_worlds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Merging Two Worlds
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guidelines
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guidelines
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../mammoth_gantry/motor_setup/motor_setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Motor Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../mammoth_gantry/water_cooling/water_cooling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Water Cooling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../mammoth_gantry/idler_setup/idler_setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Idler Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../mammoth_gantry/belt_path/belt_path/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Belt Path
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../mammoth_gantry/belt_tension/belt_tension/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Belt Tension
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Voron 3D Printers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Voron 3D Printers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../voron_3d_printers/awd_gantry_vz_toolhead_printed_version/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWD Gantry with VZBOT Toolhead Printed Version
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AWD Gantry with VZBOT Toolhead Printed Version
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../voron_3d_printers/awd_gantry_vz_toolhead_printed_version/bom/awdvz_sourcing_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sourcing Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../voron_3d_printers/awd_gantry_vz_toolhead_printed_version/printing/awdvz_printing_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Printing Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../voron_3d_printers/awd_gantry_vz_toolhead_printed_version/manual/awdvz_preassembly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preassembly Manual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../voron_3d_printers/awd_gantry_vz_toolhead_printed_version/manual/awdvz_assembly_manual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assembly Manual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../voron_3d_printers/awd_gantry_vz_toolhead_cnc_version/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWD Gantry with VZBOT Toolhead CNC Version
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AWD Gantry with VZBOT Toolhead CNC Version
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../voron_3d_printers/awd_gantry_vz_toolhead_cnc_version/bom/awdvz_cnc_sourcing_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sourcing Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../voron_3d_printers/awd_gantry_vz_toolhead_cnc_version/printing/awdvz_cnc_printing_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Printing Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../voron_3d_printers/awd_gantry_vz_toolhead_cnc_version/manual/awdvz_cnc_preassembly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preassembly Manual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../voron_3d_printers/awd_gantry_vz_toolhead_cnc_version/manual/awdvz_cnc_assembly_manual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assembly Manual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../voron_3d_printers/z_axis_tensioner_voron24/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tool-free Z-Axis Tensioner for Voron 2.4
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tool-free Z-Axis Tensioner for Voron 2.4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../voron_3d_printers/z_axis_tensioner_voron24/bom/sourcing_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sourcing Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../voron_3d_printers/z_axis_tensioner_voron24/printing/printing_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Printing Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../voron_3d_printers/z_axis_tensioner_voron24/manual/preassembly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preassembly Manual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../voron_3d_printers/z_axis_tensioner_voron24/manual/assembly_manual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assembly Manual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../voron_3d_printers/z_axis_tensioner_voron24/open%20source/open_source/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Open Source
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How Your Support Helps
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    How Your Support Helps
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../how_your_support_helps/supporting_innovation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Supporting Innovation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Milo CNC MODs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Milo CNC MODs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../milo_cnc/dust_cover/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dust Cover
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dust Cover
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../milo_cnc/dust_cover/bom/dust_cover_sourcing_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sourcing Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../milo_cnc/dust_cover/printing/dust_cover_printing_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Printing Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../voron_3d_printers/awd_gantry_vz_toolhead_printed_version/manual/awdvz_preassembly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preassembly Manual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../voron_3d_printers/awd_gantry_vz_toolhead_printed_version/manual/awdvz_assembly_manual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assembly Manual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../../evolution/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    behemoth AWD Gantry
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Mellow-3D behemoth AWD Gantry for Voron 3D Printers
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="mellow-3d-behemoth-voron-24-bill-of-material"><strong>Mellow-3D behemoth - Voron 2.4 - Bill of material</strong><a class="headerlink" href="#mellow-3d-behemoth-voron-24-bill-of-material" title="Permanent link">&para;</a></h1>
+<p><img alt="Elegoo Orange Storm Giga with behemoth AWD Gantry" src="/behemoth/elegoo_giga/bom/image/giga_AWD_1.png" /></p>
+<hr />
+<h2 id="version-100-25042026">Version: 1.00 / 25.04.2026<a class="headerlink" href="#version-100-25042026" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="behemoth-set1-x1-y1-motor-mount">behemoth - Set1: X1 &amp; Y1 Motor Mount<a class="headerlink" href="#behemoth-set1-x1-y1-motor-mount" title="Permanent link">&para;</a></h2>
+<h3 id="aluminium-parts">Aluminium Parts<a class="headerlink" href="#aluminium-parts" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th><strong>Description</strong></th>
+<th style="text-align: right;"><strong>Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 1 - behemoth X1 top motor mount</strong></td>
+<td style="text-align: right;"><a href="https://de.aliexpress.com/item/33023133633.html?">Mellow 3D</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 1 - behemoth X1 bottom motor mount</strong></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 1 - behemoth Y1 top motor mount</strong></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 1 - behemoth Y1 bottom motor mount</strong></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="screws">Screws<a class="headerlink" href="#screws" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">4x</td>
+<td style="text-align: right;"><strong>M3x5mm SHCS</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">14x</td>
+<td style="text-align: right;"><strong>M3x6mm SHCS</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">2x</td>
+<td style="text-align: right;"><strong>M3x10mm SHCS</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">6x</td>
+<td style="text-align: right;"><strong>M3x55mm SHCS</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">4x</td>
+<td style="text-align: right;"><strong>M5x15mm SHCS</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">16x</td>
+<td style="text-align: right;"><strong>M5x20mm SHCS</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">2x</td>
+<td style="text-align: right;"><strong>Sholder bolt 50mm</strong>: Shoulder Diameter (d) 5mm / Thread Size 4mm</td>
+</tr>
+</tbody>
+</table>
+<h3 id="flanged-ball-bearings">Flanged Ball Bearings<a class="headerlink" href="#flanged-ball-bearings" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">2x</td>
+<td style="text-align: right;"><strong>625</strong> for 5mm Motor Shaft</td>
+</tr>
+<tr>
+<td style="text-align: left;">2x</td>
+<td style="text-align: right;"><strong>688</strong> for 8mm Motor Shaft <strong>NOT INCLUDED IN THE KIT</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="aluminium-bushings">Aluminium Bushings<a class="headerlink" href="#aluminium-bushings" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">6x</td>
+<td style="text-align: right;"><strong>M3 Bushing</strong> 3.1mm ID x 6mm OD x 30mm</td>
+</tr>
+</tbody>
+</table>
+<h3 id="drop-in-t-nut">Drop-in T-nut<a class="headerlink" href="#drop-in-t-nut" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">20x</td>
+<td style="text-align: right;"><strong>M5 T-nut</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="behemoth-set2-x-y-motor-mount">behemoth - Set2: X &amp; Y Motor Mount<a class="headerlink" href="#behemoth-set2-x-y-motor-mount" title="Permanent link">&para;</a></h2>
+<h3 id="aluminium-parts_1">Aluminium Parts<a class="headerlink" href="#aluminium-parts_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th><strong>Description</strong></th>
+<th style="text-align: right;"><strong>Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 2 - behemoth X top motor mount</strong></td>
+<td style="text-align: right;"><a href="https://de.aliexpress.com/item/33023133633.html?">Mellow 3D</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 2 - behemoth X bottom motor mount</strong></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 2 - behemoth Y top motor mount</strong></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 2 - behemoth Y bottom motor mount</strong></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="screws_1">Screws<a class="headerlink" href="#screws_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">4x</td>
+<td style="text-align: right;"><strong>M3x5mm SHCS</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">6x</td>
+<td style="text-align: right;"><strong>M3x6mm SHCS</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">2x</td>
+<td style="text-align: right;"><strong>M3x10mm SHCS</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">6x</td>
+<td style="text-align: right;"><strong>M3x55mm SHCS</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">4x</td>
+<td style="text-align: right;"><strong>M5x15mm SHCS</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">8x</td>
+<td style="text-align: right;"><strong>M5x20mm SHCS</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="flanged-ball-bearings_1">Flanged Ball Bearings<a class="headerlink" href="#flanged-ball-bearings_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">2x</td>
+<td style="text-align: right;"><strong>625</strong> for 5mm Motor Shaft</td>
+</tr>
+<tr>
+<td style="text-align: left;">2x</td>
+<td style="text-align: right;"><strong>688</strong> for 8mm Motor Shaft <strong>NOT INCLUDED IN THE KIT</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="aluminium-bushings_1">Aluminium Bushings<a class="headerlink" href="#aluminium-bushings_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">6x</td>
+<td style="text-align: right;"><strong>M3 Bushing</strong> 3.1mm ID x 6mm OD x 30mm</td>
+</tr>
+</tbody>
+</table>
+<h3 id="drop-in-t-nut_1">Drop-in T-nut<a class="headerlink" href="#drop-in-t-nut_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">12x</td>
+<td style="text-align: right;"><strong>M5 T-nut</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="behemoth-set3-x1-y1-idler-pack">behemoth - Set3: X1 &amp; Y1 Idler Pack<a class="headerlink" href="#behemoth-set3-x1-y1-idler-pack" title="Permanent link">&para;</a></h2>
+<h3 id="aluminium-parts_2">Aluminium Parts<a class="headerlink" href="#aluminium-parts_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th><strong>Description</strong></th>
+<th style="text-align: right;"><strong>Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 3 - behemoth X1 top idler pack</strong></td>
+<td style="text-align: right;"><a href="https://de.aliexpress.com/item/33023133633.html?">Mellow 3D</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 3 - behemoth X1 bottom idler pack</strong></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 3 - behemoth Y1 top idler pack</strong></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 3 - behemoth Y1 bottom idler pack</strong></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">2x</td>
+<td><strong>SET 3 - behemoth Y1 bottom idler pack brace</strong></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="screws_2">Screws<a class="headerlink" href="#screws_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">2x</td>
+<td style="text-align: right;"><strong>M2x10mm SHCS</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">4x</td>
+<td style="text-align: right;"><strong>Low-Profile M3x8mm</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="flanged-ball-bearings_2">Flanged Ball Bearings<a class="headerlink" href="#flanged-ball-bearings_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">16x</td>
+<td style="text-align: right;"><strong>MF115ZZ</strong> for 5mm Live Idler Shaft</td>
+</tr>
+</tbody>
+</table>
+<h2 id="behemoth-set4-idler-pack-tension-arms">behemoth - Set4: Idler Pack Tension Arms<a class="headerlink" href="#behemoth-set4-idler-pack-tension-arms" title="Permanent link">&para;</a></h2>
+<h3 id="aluminium-parts_3">Aluminium Parts<a class="headerlink" href="#aluminium-parts_3" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th><strong>Description</strong></th>
+<th style="text-align: right;"><strong>Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">2x</td>
+<td><strong>SET 4 - behemoth idler pack tension arm</strong></td>
+<td style="text-align: right;"><a href="https://de.aliexpress.com/item/33023133633.html?">Mellow 3D</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="screws_3">Screws<a class="headerlink" href="#screws_3" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">2x</td>
+<td style="text-align: right;"><strong>M4x25mm SHCS</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="flanged-ball-bearings_3">Flanged Ball Bearings<a class="headerlink" href="#flanged-ball-bearings_3" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">4x</td>
+<td style="text-align: right;"><strong>MF115ZZ</strong> for 5mm Live Idler Shaft</td>
+</tr>
+</tbody>
+</table>
+<h3 id="h6-precision-dowel-pins">h6 Precision dowel pins<a class="headerlink" href="#h6-precision-dowel-pins" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">2x</td>
+<td style="text-align: right;">h6 Precision dowel pins <strong>M5x45mm</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="precision-shims">Precision shims<a class="headerlink" href="#precision-shims" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">4x</td>
+<td style="text-align: right;">Precision shims <strong>M5x7x1mm</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="cross-hole-hammer-nuts">Cross Hole Hammer Nuts<a class="headerlink" href="#cross-hole-hammer-nuts" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">2x</td>
+<td style="text-align: right;"><strong>M4x25mm</strong> Hammer Nut</td>
+</tr>
+</tbody>
+</table>
+<h2 id="behemoth-set5-x-y-idler-pack">behemoth - Set5: X &amp; Y Idler Pack<a class="headerlink" href="#behemoth-set5-x-y-idler-pack" title="Permanent link">&para;</a></h2>
+<h3 id="aluminium-parts_4">Aluminium Parts<a class="headerlink" href="#aluminium-parts_4" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th><strong>Description</strong></th>
+<th style="text-align: right;"><strong>Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 5 - behemoth X top idler pack</strong></td>
+<td style="text-align: right;"><a href="https://de.aliexpress.com/item/33023133633.html?">Mellow 3D</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 5 - behemoth X bottom idler pack</strong></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 5 - behemoth Y top idler pack</strong></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 5 - behemoth Y bottom idler pack</strong></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="flanged-ball-bearings_4">Flanged Ball Bearings<a class="headerlink" href="#flanged-ball-bearings_4" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">4x</td>
+<td style="text-align: right;"><strong>MF115ZZ</strong> for 5mm Live Idler Shaft</td>
+</tr>
+</tbody>
+</table>
+<h2 id="behemoth-set6-xy-joiners">behemoth - Set6: XY Joiners<a class="headerlink" href="#behemoth-set6-xy-joiners" title="Permanent link">&para;</a></h2>
+<h3 id="aluminium-parts_5">Aluminium Parts<a class="headerlink" href="#aluminium-parts_5" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th><strong>Description</strong></th>
+<th style="text-align: right;"><strong>Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 6 - behemoth XY-joiner A top</strong></td>
+<td style="text-align: right;"><a href="https://de.aliexpress.com/item/33023133633.html?">Mellow 3D</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 6 - behemoth XY-joiner A bottom</strong></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">2x</td>
+<td><strong>SET 6 - behemoth XY-joiner AB middle</strong></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 6 - behemoth XY-joiner B top</strong></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 6 - behemoth XY-joiner B bottom</strong></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="screws_4">Screws<a class="headerlink" href="#screws_4" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">8x</td>
+<td style="text-align: right;"><strong>Low-Profile M3x5mm</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">8x</td>
+<td style="text-align: right;"><strong>Low-Profile M3x8mm</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">6x</td>
+<td style="text-align: right;"><strong>M5x18mm SHCS</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="flanged-ball-bearings_5">Flanged Ball Bearings<a class="headerlink" href="#flanged-ball-bearings_5" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">8x</td>
+<td style="text-align: right;"><strong>MF115ZZ</strong> for 5mm Live Idler Shaft</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>X-axis SET7 and SET8 are ideal for high-speed 3D printing and chamber temperatures up to 60 °C. If you’re looking for a high-temperature (up to 100C) X-axis, choose SET9–SET11 depending on your 3D printer size.</strong></p>
+</div>
+<h2 id="behemoth-set7-high-speed-x-axis-for-voron-300">behemoth - Set7: High Speed X-axis for Voron 300<a class="headerlink" href="#behemoth-set7-high-speed-x-axis-for-voron-300" title="Permanent link">&para;</a></h2>
+<h3 id="aluminium-parts_6">Aluminium Parts<a class="headerlink" href="#aluminium-parts_6" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th><strong>Description</strong></th>
+<th style="text-align: right;"><strong>Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 7 - behemoth 300 X axis high-speed</strong></td>
+<td style="text-align: right;"><a href="https://de.aliexpress.com/item/33023133633.html?">Mellow 3D</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="behemoth-set8-high-speed-x-axis-for-voron-350">behemoth - Set8: High Speed X-axis for Voron 350<a class="headerlink" href="#behemoth-set8-high-speed-x-axis-for-voron-350" title="Permanent link">&para;</a></h2>
+<h3 id="aluminium-parts_7">Aluminium Parts<a class="headerlink" href="#aluminium-parts_7" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th><strong>Description</strong></th>
+<th style="text-align: right;"><strong>Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 8 - behemoth 350 X axis high-speed</strong></td>
+<td style="text-align: right;"><a href="https://de.aliexpress.com/item/33023133633.html?">Mellow 3D</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="behemoth-set9-high-temperature-x-axis-for-voron-300">behemoth - Set9: High-temperature X-axis for Voron 300<a class="headerlink" href="#behemoth-set9-high-temperature-x-axis-for-voron-300" title="Permanent link">&para;</a></h2>
+<h3 id="stainless-steel-parts">Stainless steel Parts<a class="headerlink" href="#stainless-steel-parts" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th><strong>Description</strong></th>
+<th style="text-align: right;"><strong>Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 9 - behemoth 300 X axis high-temp</strong></td>
+<td style="text-align: right;"><a href="https://de.aliexpress.com/item/33023133633.html?">Mellow 3D</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="behemoth-set10-high-temperature-x-axis-for-voron-350">behemoth - Set10: High-temperature X-axis for Voron 350<a class="headerlink" href="#behemoth-set10-high-temperature-x-axis-for-voron-350" title="Permanent link">&para;</a></h2>
+<h3 id="stainless-steel-parts_1">Stainless steel Parts<a class="headerlink" href="#stainless-steel-parts_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th><strong>Description</strong></th>
+<th style="text-align: right;"><strong>Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 10 - behemoth 350 X axis high-temp</strong></td>
+<td style="text-align: right;"><a href="https://de.aliexpress.com/item/33023133633.html?">Mellow 3D</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="behemoth-set11-high-temperature-x-axis-for-voron-400">behemoth - Set11: High-temperature X-axis for Voron 400<a class="headerlink" href="#behemoth-set11-high-temperature-x-axis-for-voron-400" title="Permanent link">&para;</a></h2>
+<h3 id="stainless-steel-parts_2">Stainless steel Parts<a class="headerlink" href="#stainless-steel-parts_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th><strong>Description</strong></th>
+<th style="text-align: right;"><strong>Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 11 - behemoth 400 X axis high-temp</strong></td>
+<td style="text-align: right;"><a href="https://de.aliexpress.com/item/33023133633.html?">Mellow 3D</a></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please note that you are ordering <strong>SET12 – Behemoth V24 Fixed Z Joints</strong>. </p>
+<p><strong>SET13</strong>, designed for <strong>VT</strong> 3D printers, will not fit.</p>
+</div>
+<h2 id="behemoth-set12-v24-fixed-z-joints">behemoth - Set12: V24 Fixed Z Joints<a class="headerlink" href="#behemoth-set12-v24-fixed-z-joints" title="Permanent link">&para;</a></h2>
+<h3 id="aluminium-parts_8">Aluminium Parts<a class="headerlink" href="#aluminium-parts_8" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th><strong>Description</strong></th>
+<th style="text-align: right;"><strong>Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">2x</td>
+<td><strong>SET 12 - behemoth V24 Fixed Z Joints A1</strong></td>
+<td style="text-align: right;"><a href="https://de.aliexpress.com/item/33023133633.html?">Mellow 3D</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">2x</td>
+<td><strong>SET 12 - behemoth V24 Fixed Z Joints A2</strong></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">2x</td>
+<td><strong>SET 12 - behemoth V24 Fixed Z Joints B1</strong></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">2x</td>
+<td><strong>SET 12 - behemoth V24 Fixed Z Joints B2</strong></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="screws_5">Screws<a class="headerlink" href="#screws_5" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">16x</td>
+<td style="text-align: right;"><strong>M3x6mm SHCS</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Before ordering live idlers for your 3D printer, confirm whether your build uses 9 mm or 12 mm belts. The live idlers are press-fitted and difficult to replace, so choosing the correct size is important. If you order the wrong version, you will need to purchase the correct one.</p>
+<p><strong>SET14 and SET15 are designed for 9 mm belts.</strong></p>
+<p><strong>SET16 and SET17 are designed for 12 mm belts.</strong></p>
+</div>
+<h2 id="behemoth-set14-live-idler-9mm-with-teeth">behemoth - Set14: Live Idler 9mm with teeth<a class="headerlink" href="#behemoth-set14-live-idler-9mm-with-teeth" title="Permanent link">&para;</a></h2>
+<h3 id="live-idler">Live Idler<a class="headerlink" href="#live-idler" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th><strong>Description</strong></th>
+<th style="text-align: right;"><strong>Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">6x</td>
+<td><strong>SET 14 - behemoth live idler 9mm with teeth</strong></td>
+<td style="text-align: right;"><a href="https://de.aliexpress.com/item/33023133633.html?">Mellow 3D</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="behemoth-set15-live-idler-9mm-without-teeth">behemoth - Set15: Live Idler 9mm without teeth<a class="headerlink" href="#behemoth-set15-live-idler-9mm-without-teeth" title="Permanent link">&para;</a></h2>
+<h3 id="live-idler_1">Live Idler<a class="headerlink" href="#live-idler_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th><strong>Description</strong></th>
+<th style="text-align: right;"><strong>Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">8x</td>
+<td><strong>SET 15 - behemoth live idler 9mm without teeth</strong></td>
+<td style="text-align: right;"><a href="https://de.aliexpress.com/item/33023133633.html?">Mellow 3D</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="behemoth-set16-live-idler-12mm-with-teeth">behemoth - Set16: Live Idler 12mm with teeth<a class="headerlink" href="#behemoth-set16-live-idler-12mm-with-teeth" title="Permanent link">&para;</a></h2>
+<h3 id="live-idler_2">Live Idler<a class="headerlink" href="#live-idler_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th><strong>Description</strong></th>
+<th style="text-align: right;"><strong>Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">6x</td>
+<td><strong>SET 16 - behemoth live idler 12mm with teeth</strong></td>
+<td style="text-align: right;"><a href="https://de.aliexpress.com/item/33023133633.html?">Mellow 3D</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="behemoth-set17-live-idler-12mm-without-teeth">behemoth - Set17: Live Idler 12mm without teeth<a class="headerlink" href="#behemoth-set17-live-idler-12mm-without-teeth" title="Permanent link">&para;</a></h2>
+<h3 id="live-idler_3">Live Idler<a class="headerlink" href="#live-idler_3" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th><strong>Description</strong></th>
+<th style="text-align: right;"><strong>Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">8x</td>
+<td><strong>SET 17 - behemoth live idler 12mm without teeth</strong></td>
+<td style="text-align: right;"><a href="https://de.aliexpress.com/item/33023133633.html?">Mellow 3D</a></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please note before ordering: the behemoth use <strong>brass pulleys</strong> for increased strength and reduced wear compared to aluminum. <strong>Aluminum pulleys</strong> are still supported if you prefer that option.</p>
+<p>The gantry supports <strong>9 mm and 12 mm</strong> belts, as well as <strong>5 mm or 8 mm</strong> motor shafts. Please confirm your motor shaft size and belt width before placing your order.</p>
+</div>
+<h2 id="behemoth-set18-brass-m5x9mm-belt-pulley">behemoth - Set18: Brass M5x9mm belt pulley<a class="headerlink" href="#behemoth-set18-brass-m5x9mm-belt-pulley" title="Permanent link">&para;</a></h2>
+<h3 id="brass-pulley">Brass pulley<a class="headerlink" href="#brass-pulley" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th><strong>Description</strong></th>
+<th style="text-align: right;"><strong>Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">4x</td>
+<td><strong>SET 18 - behemoth brass M5x9mm belt pulley</strong></td>
+<td style="text-align: right;"><a href="https://de.aliexpress.com/item/33023133633.html?">Mellow 3D</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="behemoth-set19-brass-m5x12mm-belt-pulley">behemoth - Set19: Brass M5x12mm belt pulley<a class="headerlink" href="#behemoth-set19-brass-m5x12mm-belt-pulley" title="Permanent link">&para;</a></h2>
+<h3 id="brass-pulley_1">Brass pulley<a class="headerlink" href="#brass-pulley_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th><strong>Description</strong></th>
+<th style="text-align: right;"><strong>Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">4x</td>
+<td><strong>SET 19 - behemoth brass M5x12mm belt pulley</strong></td>
+<td style="text-align: right;"><a href="https://de.aliexpress.com/item/33023133633.html?">Mellow 3D</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="behemoth-set20-brass-m8x9mm-belt-pulley">behemoth - Set20: Brass M8x9mm belt pulley<a class="headerlink" href="#behemoth-set20-brass-m8x9mm-belt-pulley" title="Permanent link">&para;</a></h2>
+<h3 id="brass-pulley_2">Brass pulley<a class="headerlink" href="#brass-pulley_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th><strong>Description</strong></th>
+<th style="text-align: right;"><strong>Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">4x</td>
+<td><strong>SET 20 - behemoth brass M8x9mm belt pulley</strong></td>
+<td style="text-align: right;"><a href="https://de.aliexpress.com/item/33023133633.html?">Mellow 3D</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="behemoth-set21-brass-m8x12mm-belt-pulley">behemoth - Set21: Brass M8x12mm belt pulley<a class="headerlink" href="#behemoth-set21-brass-m8x12mm-belt-pulley" title="Permanent link">&para;</a></h2>
+<h3 id="brass-pulley_3">Brass pulley<a class="headerlink" href="#brass-pulley_3" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th><strong>Description</strong></th>
+<th style="text-align: right;"><strong>Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">4x</td>
+<td><strong>SET 21 - behemoth brass M8x12mm belt pulley</strong></td>
+<td style="text-align: right;"><a href="https://de.aliexpress.com/item/33023133633.html?">Mellow 3D</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="behemoth-set22-behemoth-toolhead-for-mgn9h-and-mgn12h">behemoth - Set22: behemoth Toolhead for MGN9H and MGN12H<a class="headerlink" href="#behemoth-set22-behemoth-toolhead-for-mgn9h-and-mgn12h" title="Permanent link">&para;</a></h2>
+<h3 id="aluminium-parts_9">Aluminium Parts<a class="headerlink" href="#aluminium-parts_9" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th><strong>Description</strong></th>
+<th style="text-align: right;"><strong>Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 22 - behemoth Toolhead Back Plate</strong></td>
+<td style="text-align: right;"><a href="https://de.aliexpress.com/item/33023133633.html?">Mellow 3D</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 22 - behemoth Toolhead Top Plate</strong></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 22 - behemoth CPAP Duct Slider</strong></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="screws_6">Screws<a class="headerlink" href="#screws_6" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">2x</td>
+<td style="text-align: right;"><strong>M2x10mm SHCS</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">2x</td>
+<td style="text-align: right;"><strong>M3x3mm SHCS</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">8x</td>
+<td style="text-align: right;"><strong>M3x6mm SHCS</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">4x</td>
+<td style="text-align: right;"><strong>Low-Profile M3x6mm</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">4x</td>
+<td style="text-align: right;"><strong>M3x8mm SHCS</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">6x</td>
+<td style="text-align: right;"><strong>Low-Profile M3x8mm</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">3x</td>
+<td style="text-align: right;"><strong>M3x12mm SHCS</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">4x</td>
+<td style="text-align: right;"><strong>M3x16mm SHCS</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">4x</td>
+<td style="text-align: right;"><strong>M3x40mm SHCS</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="locknut">Locknut<a class="headerlink" href="#locknut" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">2x</td>
+<td style="text-align: right;"><strong>M3</strong> Locknut</td>
+</tr>
+</tbody>
+</table>
+<h3 id="washer">Washer<a class="headerlink" href="#washer" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">2x</td>
+<td style="text-align: right;"><strong>M3</strong> Washer</td>
+</tr>
+</tbody>
+</table>
+<h3 id="threaded-insert">Threaded Insert<a class="headerlink" href="#threaded-insert" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">6x</td>
+<td style="text-align: right;"><strong>M3 Threaded Insert</strong> (M3x5mmx4mm)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="aluminium-bushings_2">Aluminium Bushings<a class="headerlink" href="#aluminium-bushings_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">2x</td>
+<td style="text-align: right;"><strong>M3 Bushing</strong> 3.1mm ID x 6mm OD x 10mm</td>
+</tr>
+<tr>
+<td style="text-align: left;">4x</td>
+<td style="text-align: right;"><strong>M3 Bushing</strong> 3.1mm ID x 6mm OD x 35mm</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Before ordering <strong>belt clamps</strong> for your 3D printer, confirm whether your build uses 9 mm or 12 mm belts.</p>
+<p><strong>SET23 is designed for 9-10 mm belts.</strong></p>
+<p><strong>SET24 is designed for 12 mm belts.</strong></p>
+</div>
+<h2 id="behemoth-set23-9-10mm-belt-clamp">behemoth - Set23: 9-10mm Belt Clamp<a class="headerlink" href="#behemoth-set23-9-10mm-belt-clamp" title="Permanent link">&para;</a></h2>
+<h3 id="laser-cut-stainless-steel">Laser Cut Stainless Steel<a class="headerlink" href="#laser-cut-stainless-steel" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th><strong>Description</strong></th>
+<th style="text-align: right;"><strong>Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">2x</td>
+<td><strong>SET 23 - behemoth 9-10mm Belt Clamp</strong></td>
+<td style="text-align: right;"><a href="https://de.aliexpress.com/item/33023133633.html?">Mellow 3D</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="behemoth-set24-12mm-belt-clamp">behemoth - Set24: 12mm Belt Clamp<a class="headerlink" href="#behemoth-set24-12mm-belt-clamp" title="Permanent link">&para;</a></h2>
+<h3 id="laser-cut-stainless-steel_1">Laser Cut Stainless Steel<a class="headerlink" href="#laser-cut-stainless-steel_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th><strong>Description</strong></th>
+<th style="text-align: right;"><strong>Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">2x</td>
+<td><strong>SET 24 - behemoth 12mm Belt Clamp</strong></td>
+<td style="text-align: right;"><a href="https://de.aliexpress.com/item/33023133633.html?">Mellow 3D</a></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The <strong>behemoth Toolhead</strong> is specifically designed for use with the <strong>mammoth-3D Hell Fire Hotend</strong>. However, it can also support other hotends when used with the universal adapter.</p>
+<p>Please review the following options carefully before placing your order:</p>
+<p><strong>Set 25: Designed exclusively for the Hell Fire Hotend</strong> and is not compatible with other hotends.</p>
+<p><strong>Set 26</strong>: Includes the <strong>universal hotend plate</strong>, allowing compatibility with a range of hotends such as the <strong>Rapido, Goliath Air, Goliath Water, and Tricorn hotends</strong>.</p>
+<p>Note: <strong>The Chube</strong> Hotend is currently not supported.</p>
+</div>
+<h2 id="behemoth-set25-hell-fire-water-cooling-plate-mounting-plate">behemoth - Set25: Hell Fire Water cooling Plate / Mounting Plate<a class="headerlink" href="#behemoth-set25-hell-fire-water-cooling-plate-mounting-plate" title="Permanent link">&para;</a></h2>
+<h3 id="aluminium-parts_10">Aluminium Parts<a class="headerlink" href="#aluminium-parts_10" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th><strong>Description</strong></th>
+<th style="text-align: right;"><strong>Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 25 - behemoth Hotend Water Block</strong></td>
+<td style="text-align: right;"><a href="https://de.aliexpress.com/item/33023133633.html?">Mellow 3D</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 25 - behemoth Hell Fire Hotend Mount</strong></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="screws_7">Screws<a class="headerlink" href="#screws_7" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">4x</td>
+<td style="text-align: right;"><strong>Heat Break Screws</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">4x</td>
+<td style="text-align: right;"><strong>Heat Break Nuts</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bearings">Bearings<a class="headerlink" href="#bearings" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1x</td>
+<td style="text-align: right;"><strong>3mm</strong> Bearing</td>
+</tr>
+</tbody>
+</table>
+<h3 id="press-fit-adapter">Press fit adapter<a class="headerlink" href="#press-fit-adapter" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">2x</td>
+<td style="text-align: right;"><strong>Press fit adapter</strong> for 2mm ID x 4mm OD</td>
+</tr>
+</tbody>
+</table>
+<h2 id="behemoth-set26-universal-hotend-plate-and-duct-mounting-plate">behemoth - Set26: Universal Hotend Plate and Duct Mounting Plate<a class="headerlink" href="#behemoth-set26-universal-hotend-plate-and-duct-mounting-plate" title="Permanent link">&para;</a></h2>
+<h3 id="aluminium-parts_11">Aluminium Parts<a class="headerlink" href="#aluminium-parts_11" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th><strong>Description</strong></th>
+<th style="text-align: right;"><strong>Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 26 - behemoth Universal Duct Plate</strong></td>
+<td style="text-align: right;"><a href="https://de.aliexpress.com/item/33023133633.html?">Mellow 3D</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 26 - behemoth Universal Hotend Plate</strong></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="mammoth-3d-set28-hell-fire-hotend-150-watt">mammoth-3D - Set28: Hell Fire Hotend 150 Watt<a class="headerlink" href="#mammoth-3d-set28-hell-fire-hotend-150-watt" title="Permanent link">&para;</a></h2>
+<h3 id="hell-fire-hotend">Hell Fire Hotend<a class="headerlink" href="#hell-fire-hotend" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th><strong>Description</strong></th>
+<th style="text-align: right;"><strong>Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1x</td>
+<td><strong>SET 28 - Hell Fire Hotend</strong></td>
+<td style="text-align: right;"><a href="https://de.aliexpress.com/item/33023133633.html?">Mellow 3D</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="thermistor">Thermistor<a class="headerlink" href="#thermistor" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1x</td>
+<td style="text-align: right;"><strong>550C Thermistor</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="screws_8">Screws<a class="headerlink" href="#screws_8" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">2x</td>
+<td style="text-align: right;"><strong>M2x3mm SHCS</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="slm-titanium-shield">SLM Titanium Shield<a class="headerlink" href="#slm-titanium-shield" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1x</td>
+<td style="text-align: right;"><strong>Hell Fire Shiel</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="heat-brak">Heat Brak<a class="headerlink" href="#heat-brak" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1x</td>
+<td style="text-align: right;"><strong>Hell Fire Heat Break</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">1x</td>
+<td style="text-align: right;"><strong>Hell Fire Heat Break Cover</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="kevlar-sock">Kevlar Sock<a class="headerlink" href="#kevlar-sock" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1x</td>
+<td style="text-align: right;"><strong>Hell Fire Kevlar Sock</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="v6-nozzle">V6 Nozzle<a class="headerlink" href="#v6-nozzle" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: right;"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1x</td>
+<td style="text-align: right;"><strong>0.4mm V6 Nozzle</strong></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../../evolution/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Evolution">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Evolution
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../../elegoo_giga/bom/source_guide/" class="md-footer__link md-footer__link--next" aria-label="Next: Sourcing Guide">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Sourcing Guide
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 - 2026 mammoth-3D
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://discord.gg/3JxrSnGgsF" target="_blank" rel="noopener" title="discord.gg" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/mammoth-3D" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.sections", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.indexes", "toc.follow", "toc.integrate", "navigation.top", "content.code.copy", "navigation.footer", "tabs", "instant", "search.suggest", "search.highlight"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../javascripts/belt_calculator.js"></script>
+      
+    
+  </body>
+</html>
