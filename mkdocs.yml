@@ -9,6 +9,8 @@ nav:
 
   - "behemoth AWD Gantry":
     - Evolution: behemoth/evolution.md
+    - Mellow-3D behemoth AWD Gantry for Voron 3D Printers:
+      - Voron 2.4 Sourcing Guide: behemoth/voron/V24/source_guide.md
 
   
   - "Elegoo Orange Storm Giga":

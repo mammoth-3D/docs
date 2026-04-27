@@ -4,7 +4,7 @@
 
 ---
 
-## Version: 1.00 / 18.02.2026
+## Version: 1.10 / 18.04.2026
 
 ---
 
@@ -47,8 +47,9 @@
 | 12x  | **M3x65 SHCS** | ISO 4762 / DIN 912 | | [McMaster](https://www.mcmaster.com/91292A315/) | [Aliexpress](https://de.aliexpress.com/item/1005005347191323.html?) |
 | 7x  | **Low Profile M3x6** | ISO 4762 / DIN 912 | | [McMaster](https://www.mcmaster.com/91223A412/) | [Aliexpress](https://de.aliexpress.com/item/1005006209329445.html?) |
 | 8x  | **Low Profile M3x8** | ISO 4762 / DIN 912 | | [McMaster](https://www.mcmaster.com/91223A413/) | [Aliexpress](https://de.aliexpress.com/item/1005006209329445.html?) |
-| 2x  | **M4x25 SHCS** | ISO 4762 / DIN 912 |[Bolt Depot](https://boltdepot.com/Product-Details?product=6399) | [McMaster](https://www.mcmaster.com/91292A122/) | [Aliexpress]() |
-| 12x | **Low Profile M4x6** | ISO 4762 / DIN 912 | | [McMaster](https://www.mcmaster.com/91223A417/) | [Aliexpress](https://de.aliexpress.com/item/1005006209329445.html?) |
+| 45x  | **M4x16 SHCS** | ISO 4762 / DIN 912 |[Bolt Depot](https://boltdepot.com/Product-Details?product=6396) | [McMaster](https://www.mcmaster.com/91292A118/) | [Aliexpress](https://de.aliexpress.com/item/1005007318253599.html) |
+| 2x  | **M4x25 SHCS** | ISO 4762 / DIN 912 |[Bolt Depot](https://boltdepot.com/Product-Details?product=6399) | [McMaster](https://www.mcmaster.com/91292A122/) | [Aliexpress](https://de.aliexpress.com/item/1005007318253599.html) |
+| 12x | **Low Profile M4x10** | ISO 4762 / DIN 912 | | [McMaster](https://www.mcmaster.com/91223A419/) | [Aliexpress](https://de.aliexpress.com/item/1005006209329445.html?) |
 | 54x | **M6x16 SHCS** | ISO 4762 / DIN 912 |[Bolt Depot](https://boltdepot.com/Product-Details?product=6418) | [McMaster](https://www.mcmaster.com/91292A135/) | [Aliexpress](https://de.aliexpress.com/item/1005001597704601.html?) |
 | 4x | **M8x60 SHCS** | ISO 4762 / DIN 912 |[Bolt Depot](https://boltdepot.com/Product-Details?product=6442) | [McMaster](https://www.mcmaster.com/91292A209/) | [Aliexpress](https://de.aliexpress.com/item/1005010060577575.html?) |
 
@@ -75,6 +76,7 @@
 ### 30 Series: T Spring Nuts
 | **Quantity** | **Description** | **Standard** | **Link1** | **Link2** | **Link3** |
 |:-------------|-----------------|--------------|-----------|-----------|----------:|
+| 45x | **M4** T-Nut   | ISO 4762 / DIN 912 | [Aliexpress](https://de.aliexpress.com/item/1005004662302085.html?) | [McMaster](https://www.mcmaster.com/products/tee-nuts/t-slotted-framing-fasteners-2~/thread-size~m4-1/rail-height~30-mm/) | [Amazon](https://www.amazon.com/Best-Sellers-T-Slot-Nuts/zgbs/industrial/16410141) |
 | 54x | **M6** T-Nut   | ISO 4762 / DIN 912 | [Aliexpress](https://de.aliexpress.com/item/1005004662302085.html?) | [McMaster](https://www.mcmaster.com/products/tee-nuts/locking-slotted-framing-nuts-2~/thread-size~m6-2/) | [Amazon](https://www.amazon.com/Best-Sellers-T-Slot-Nuts/zgbs/industrial/16410141) |
 
 ### Threaded Insert
@@ -105,7 +107,7 @@
 | 8x | **GATES-LL-2GT Belt (9mm wide)**   |  GT2  |[Fabreeko](https://www.fabreeko.com/products/gates-gt2-open-belt-ll-2gt-6-9-12-reinforced?_pos=1&_sid=535c2ed50&_ss=r&variant=42466462761215) | [KB3D](https://kb-3d.com/store/motion/42-gates-powergrip-2gt-belt-open-9mm-width.html) | [Mellow 3D](https://de.aliexpress.com/item/32952396111.html?) |
 | 8x | **GATES-LL-2GT Belt (9mm wide)**   |  GT3  |[Fabreeko](https://www.fabreeko.com/products/gates-gt3-open-belt-ll-gt3-6-9-reinforced?_pos=2&_sid=535c2ed50&_ss=r) | [KB3D](https://kb-3d.com/store/motion/1043-gates-powergrip-2mgt-gt3-belt-open-9mm-width-1702961443320.html) | [Mellow 3D](https://de.aliexpress.com/item/1005006856153263.html?) |
 
-### **X/Y-Axis 9mm Belt**
+### X/Y-Axis 9mm Belt
 
 !!! tip
 | X-Axis                              | Y-Axis                               |
@@ -115,6 +117,6 @@
 ### 3030 Aluminium Profile
 | **Quantity** | **Description** | **Standard** | **Link1** | **Link2** | **Link3** |
 |:-------------|-----------------|--------------|-----------|-----------|----------:|
-| 2x | **3030x1095mm**   |  Aluminium  |[Misumi](https://us.misumi-ec.com/vona2/detail/110302686450/?searchFlow=results2products&KWSearch=aluminium+extrusion&seriesCode=110302686450&tab=drawingAndSpecifications&Page=1) | [myaluprofil](https://www.myaluprofil.de/aluminiumprofil-30x30-nut-6-i-typ-.html) | [Aliexpress](https://de.aliexpress.com/item/1005005037443914.html?) |
-| 2x | **3030x1035mm**   |  Aluminium  |[Misumi](https://us.misumi-ec.com/vona2/detail/110302686450/?searchFlow=results2products&KWSearch=aluminium+extrusion&seriesCode=110302686450&tab=drawingAndSpecifications&Page=1) | [myaluprofil](https://www.myaluprofil.de/aluminiumprofil-30x30-nut-6-i-typ-.html) | [Aliexpress](https://de.aliexpress.com/item/1005005037443914.html?) |
-| 1x | **3030x968mm**   |  Aluminium  |[Misumi](https://us.misumi-ec.com/vona2/detail/110302686450/?searchFlow=results2products&KWSearch=aluminium+extrusion&seriesCode=110302686450&tab=drawingAndSpecifications&Page=1) | [myaluprofil](https://www.myaluprofil.de/aluminiumprofil-30x30-nut-6-i-typ-.html) | [Aliexpress](https://de.aliexpress.com/item/1005005037443914.html?) |
+| 2x | **3030x1093mm**   |  Aluminium  |[Misumi](https://us.misumi-ec.com/vona2/detail/110302686450/?searchFlow=results2products&KWSearch=aluminium+extrusion&seriesCode=110302686450&tab=drawingAndSpecifications&Page=1) | [myaluprofil](https://www.myaluprofil.de/aluminiumprofil-30x30-nut-6-i-typ-.html) | [Aliexpress](https://de.aliexpress.com/item/1005005037443914.html?) |
+| 2x | **3030x974mm**   |  Aluminium  |[Misumi](https://us.misumi-ec.com/vona2/detail/110302686450/?searchFlow=results2products&KWSearch=aluminium+extrusion&seriesCode=110302686450&tab=drawingAndSpecifications&Page=1) | [myaluprofil](https://www.myaluprofil.de/aluminiumprofil-30x30-nut-6-i-typ-.html) | [Aliexpress](https://de.aliexpress.com/item/1005005037443914.html?) |
+| 1x | **3030x966mm**   |  Aluminium  |[Misumi](https://us.misumi-ec.com/vona2/detail/110302686450/?searchFlow=results2products&KWSearch=aluminium+extrusion&seriesCode=110302686450&tab=drawingAndSpecifications&Page=1) | [myaluprofil](https://www.myaluprofil.de/aluminiumprofil-30x30-nut-6-i-typ-.html) | [Aliexpress](https://de.aliexpress.com/item/1005005037443914.html?) |
