@@ -1,6 +1,6 @@
 # **Mellow-3D behemoth - Voron 2.4 - Bill of material**
 
-![Elegoo Orange Storm Giga with behemoth AWD Gantry](/behemoth/voron/V24/behemoth_V24.png)
+![behemoth AWD Gantry for Voron 2.4](/behemoth/voron/V24/behemoth_V24.png)
 
 ---
 
