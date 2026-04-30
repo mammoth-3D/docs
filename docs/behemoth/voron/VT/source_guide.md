@@ -1,10 +1,10 @@
 # **Mellow-3D behemoth - Voron 2.4 - Bill of material**
 
-![Elegoo Orange Storm Giga with behemoth AWD Gantry](/behemoth/voron/V24/behemoth_V24.png)
+![Elegoo Orange Storm Giga with behemoth AWD Gantry](/behemoth/voron/VT/behemoth_VT.png)
 
 ---
 
-## Version: 1.00 / 25.04.2026
+## Version: 1.00 / 30.04.2026
 
 ---
 
@@ -212,24 +212,30 @@
 | 1x | **SET 11 - behemoth 400 X axis high-temp** |[Mellow 3D](https://de.aliexpress.com/item/33023133633.html?) |
 
 !!! warning
-    Please note that you are ordering **SET12 – Behemoth V24 Fixed Z Joints**. 
+    Please note that you are ordering **SET13 – behemoth VT frame brace**. 
 
-    **SET13**, designed for **VT** 3D printers, will not fit.
+    **SET12**, designed for **V24** 3D printers, will not fit.
 
-## behemoth - Set12: V24 Fixed Z Joints
+## behemoth - Set13: Frame Brace
 
 ### Aluminium Parts
 | **Quantity** | **Description** |**Link** |
 |:-------------|-----------------|--------:|
-| 2x | **SET 12 - behemoth V24 Fixed Z Joints A1** |[Mellow 3D](https://de.aliexpress.com/item/33023133633.html?) |
-| 2x | **SET 12 - behemoth V24 Fixed Z Joints A2** | |
-| 2x | **SET 12 - behemoth V24 Fixed Z Joints B1** | |
-| 2x | **SET 12 - behemoth V24 Fixed Z Joints B2** | |
+| 2x | **SET 13 - behemoth VT Frame Brace A1** |[Mellow 3D](https://de.aliexpress.com/item/33023133633.html?) |
+| 2x | **SET 13 - behemoth VT Frame Brace A2** | |
+| 2x | **SET 13 - behemoth VT Frame Brace B1** | |
+| 2x | **SET 13 - behemoth VT Frame Brace B2** | |
 
 ### Screws
 | **Quantity** | **Description** |
 |:-------------|----------------:|
-| 16x | **M3x6mm SHCS** |
+| 8x | **M5x10mm SHCS** |
+| 8x | **M5x20mm SHCS** |
+
+### Drop-in T-nut
+| **Quantity** | **Description** |
+|:-------------|----------------:|
+| 8x | **M5 T-nut** |
 
 !!! warning
     Before ordering live idlers for your 3D printer, confirm whether your build uses 9 mm or 12 mm belts. The live idlers are press-fitted and difficult to replace, so choosing the correct size is important. If you order the wrong version, you will need to purchase the correct one.

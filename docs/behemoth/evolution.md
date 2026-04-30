@@ -14,7 +14,7 @@ Each represented a different philosophy.
 
 ---
 
-# 🦣 Mammoth: Where Two Worlds Met
+# Mammoth: Where Two Worlds Met
 
 The mammoth-3D AWD Gantry was not an adapter or a light modification.
 
@@ -56,10 +56,10 @@ It is the foundation of a standalone 3D printer platform — built with scalabil
 
 ---
 
-## 📏 Built for Scale From the Start
+## Built for Scale From the Start
 
-- Initial platform size: **400 × 400 mm**
-- Long-term development target: **1000 × 1000 mm multi-toolhead capability**
+- Initial platform size: **400 × 400mm**
+- Long-term development target: **1000 × 1000mm multi-toolhead capability**
 
 behemoth is not constrained by traditional desktop dimensions.
 
@@ -67,7 +67,7 @@ It is engineered to support large-format, high-rigidity builds from day one.
 
 ---
 
-## 🏗 Transitional Compatibility
+## Transitional Compatibility
 
 In its current stage, behemoth supports Voron printers.
 
@@ -77,7 +77,7 @@ This ensures long-term scalability and mechanical stability.
 
 ---
 
-## ⚙ Configurable Belt Architecture
+## Configurable Belt Architecture
 
 behemoth supports multiple belt widths:
 
@@ -103,7 +103,7 @@ This design increases serviceability while improving long-term mechanical reliab
 
 ---
 
-## 🔩 Builder-Focused Flexibility
+## Builder-Focused Flexibility
 
 behemoth supports:
 

@@ -9,10 +9,12 @@ nav:
 
   - "behemoth AWD Gantry":
     - Evolution: behemoth/evolution.md
+    - behemoth BOM Generator: behemoth/quick-setup-bom.md
     - Mellow-3D behemoth AWD Gantry for Voron 3D Printers:
-      - Voron 2.4 Sourcing Guide: behemoth/voron/V24/source_guide.md
-
-  
+      - behemoth AWD Gantry for Voron 2.4:
+        - Voron 2.4 Sourcing Guide: behemoth/voron/V24/source_guide.md
+      - behemoth AWD Gantry for Voron Trident:  
+        - Voron Trident Sourcing Guide: behemoth/voron/VT/source_guide.md
   - "Elegoo Orange Storm Giga":
     - behemoth AWD Gantry for Elegoo Giga:
 #       - AWD Gantry: voron_3d_printers/awd_gantry_vz_toolhead_printed_version/index.md
